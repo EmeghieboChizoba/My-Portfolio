@@ -1,0 +1,292 @@
+/* GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  /* variables */
+  --primary-color: #000;
+  --secondary-color: #eecd1e;
+  --dark-color: #333;
+  --light-color: #fff;
+  /* end of variables */
+  /* background-color: #333;
+   */
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+section{
+  margin-top: 100px;
+}
+
+p{
+  padding: 5px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  color: var(--light-color);
+}
+
+hr {
+  width: 20%;
+  opacity: 0.5;
+  }
+
+span {
+  color: var(--secondary-color);
+}
+
+.hidden{
+  visibility: hidden;
+  height: 0;
+}
+
+
+/* NAVBAR STYLES */
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  margin: 10px;
+}
+
+/* ABOUT */
+.grid-1{
+  padding: 20px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns:  1fr 2fr 1fr;
+}
+
+.first-div{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* background-color: blue; */
+  justify-self: center;
+  align-self: center;
+}
+
+.grid-1 .me{
+  text-align: left;
+}
+
+.second-div{
+  justify-self: center;
+  align-self: center;
+  /* background-color: chartreuse; */
+}
+
+
+
+/* SKILLS */
+.animation-white {
+  height: 50px;
+  width: 100%;
+  background-color: var(--light-color);
+}
+
+.one {
+  height: 50px;
+  width: 95%;
+  background-color: var(--secondary-color);
+}
+
+.two {
+  height: 50px;
+  width: 85%;
+  background-color: var(--secondary-color);
+}
+
+.three {
+  height: 50px;
+  width: 78%;
+  background-color: var(--secondary-color);
+}
+
+.four {
+  height: 50px;
+  width: 50%;
+  background-color: var(--secondary-color);
+}
+
+/* PHOTOS */
+.main-grid{
+  width: 100%;
+}
+
+.photos-card{
+  margin-top: 20px;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.portrait{
+  width: 50%;
+  border-radius: 100%;
+  background-color: aliceblue;
+}
+
+.main-grid .imported{
+  width: 100%;
+}
+
+
+/* CONTACT FORM */
+.card{
+  background-color: #fff;
+  color: #fff;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+input{
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  background-color: rgba(var(--primary-color), 0.1);
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  outline: none;
+}
+
+/* FOOTER */
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+}
+
+.icons{
+  margin-top: 10px;
+  padding: 5px;
+}
+
+
+/* ANIMATIONS */
+
+
+
+/* UTILITIES */
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.button{
+  padding: 20px 20px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  border: 3px solid var(--secondary-color);
+  color: var(--light-color);
+}
+
+.button:hover{
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+a:hover{
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* FOR TABLETS */
+@media (max-width: 1028px) {
+  .navbar ul{
+    text-align: center;
+  }
+
+  .grid-1{
+    display: block;
+  }
+
+  .portrait{
+    width: 45%;
+  }
+
+
+  .grid-2{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* form */
+
+  .card{
+    width: 100%;
+  }
+
+  .button{
+    width: 50%;
+  }
+
+  .footer{
+    display: block;
+  }
+}
+
+/* FOR MOBILE */
+ @media(max-width: 500px) {
+  .navbar ul{
+    display: block;
+    text-align: center;
+    margin: 100px 0;
+  }
+  .grid-1{
+    display: block;
+  }
+
+  .portrait{
+    width: 45%;
+  }
+
+
+  .grid-2{
+    display: block;
+  }
+
+  /* form */
+  .card{
+    width: 100%;
+  }
+
+  .button{
+    width: 50%;
+  }
+
+  .footer{
+    display: block;
+  }
+}
